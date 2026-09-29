@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrio Privado Ancellotta | Exclusividad y Naturaleza en San Martín</title>
+    
+    <!-- Google Fonts: Playfair Display & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS Setup -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            beige: '#F4F1EA',
+                            green: '#1A3626',
+                            lightgreen: '#2C553E',
+                            accent: '#D4C3A3'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Montserrat', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #F4F1EA; /* brand-beige */
+            color: #1A3626; /* brand-green */
+        }
+
+        /* Scroll Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1), transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform;
+        }
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        
+        /* Utility for the WA button hover pulse */
+        @keyframes pulse-soft {
+            0% { box-shadow: 0 0 0 0 rgba(44, 85, 62, 0.4); }
+            70% { box-shadow: 0 0 0 15px rgba(44, 85, 62, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(44, 85, 62, 0); }
+        }
+        .hover-pulse:hover {
+            animation: pulse-soft 1.5s infinite;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-brand-lightgreen selection:text-brand-beige">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 bg-transparent text-white py-6">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex justify-between items-center">
+            <!-- Contenedor Flex para alinear logo y título horizontalmente -->
+<div class="flex items-center gap-4">
+  
+  <!-- Imagen del logo -->
+  <!-- Reemplaza el src con la ruta real de tu archivo exportado -->
+  <img 
+    src="imagenes/ANCELLOTTA - LOGO .png" 
+    alt="Logo Ancellotta" 
+    class="h-12 w-auto object-contain"
+  />
+  
+  <!-- Título del Desarrollo -->
+  <span class="font-playfair text-2xl font-bold text-[#2c402e]">
+    Ancellotta
+  </span>
+  
+</div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-12 items-center">
+                <a href="#inicio" class="text-xs tracking-[0.2em] uppercase hover:text-brand-accent transition-colors duration-300">Inicio</a>
+                <a href="#proyecto" class="text-xs tracking-[0.2em] uppercase hover:text-brand-accent transition-colors duration-300">El Proyecto</a>
+                <a href="#masterplan" class="text-xs tracking-[0.2em] uppercase hover:text-brand-accent transition-colors duration-300">Masterplan</a>
+                <a href="#contacto" id="nav-btn" class="text-xs tracking-[0.2em] uppercase border border-current px-6 py-2 hover:bg-white hover:text-brand-green transition-all duration-300">Contacto</a>
+            </div>
+
+            <!-- Mobile Menu Button (Icon) -->
+            <button class="md:hidden focus:outline-none hover:opacity-70 transition-opacity">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="imagenes/ance frente.png" alt="Ingreso Barrio Privado Ancellotta" class="w-full h-full object-cover transform scale-105 animate-[kenburns_20s_ease-out_forwards]">
+            <!-- Elegant Dark Green Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-green/70 via-brand-green/50 to-brand-green/80"></div>
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center text-white px-6 max-w-5xl mx-auto flex flex-col items-center mt-16">
+            <div class="fade-in flex items-center justify-center space-x-4 mb-6">
+                <div class="w-8 h-[1px] bg-brand-accent"></div>
+                <span class="uppercase tracking-[0.3em] text-xs md:text-sm font-light text-brand-accent">San Martín, Mendoza</span>
+                <div class="w-8 h-[1px] bg-brand-accent"></div>
+            </div>
+            
+            <h1 class="fade-in delay-100 font-serif text-5xl md:text-7xl lg:text-[5.5rem] mb-6 font-medium leading-[1.1]">
+                Barrio Privado <br>
+                <span class="italic font-light">Ancellotta</span>
+            </h1>
+            
+            <p class="fade-in delay-200 text-lg md:text-xl font-light tracking-wide max-w-2xl mx-auto opacity-90 leading-relaxed">
+                Descubra un enclave de tranquilidad y sofisticación. <br class="hidden md:block">Un nuevo estándar de vida rodeado de naturaleza.
+            </p>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10 fade-in delay-400">
+            <a href="#proyecto" class="flex flex-col items-center text-white/70 hover:text-white transition-colors duration-300">
+                <span class="text-[10px] uppercase tracking-[0.2em] mb-3">Descubrir</span>
+                <svg class="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+            </a>
+        </div>
+    </section>
+
+    <section id="proyecto" class="py-32 px-6 lg:px-12 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            
+            <!-- Left Text Column -->
+            <div class="lg:col-span-5 fade-in sticky top-32">
+                <span class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-green/60 mb-4 block">Visión Integral</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-green mb-8 leading-tight">
+                    Naturaleza y Elegancia <br>
+                    <span class="italic font-light text-brand-lightgreen">en perfecta armonía</span>
+                </h2>
+                <div class="w-16 h-[1px] bg-brand-accent mb-8"></div>
+                <p class="text-brand-green/80 font-light leading-relaxed mb-6 text-lg">
+                    Ancellotta es más que un barrio privado; es un proyecto urbanístico cuidadosamente diseñado para integrarse con el entorno natural mendocino, priorizando la serenidad sin renunciar a la conectividad.
+                </p>
+                <p class="text-brand-green/80 font-light leading-relaxed text-lg">
+                    Pensado para familias e inversores que buscan un refugio seguro, exclusivo y con un alto potencial de revalorización en San Martín.
+                </p>
+            </div>
+
+            <!-- Right Grid Column -->
+            <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 mt-8 lg:mt-0">
+                
+                <div class="fade-in delay-100 flex flex-col items-start group">
+                    <div class="w-14 h-14 rounded-full border border-brand-green/20 flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-brand-beige transition-colors duration-500">
+                        <svg class="w-6 h-6 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-green mb-3">21 Hectáreas</h3>
+                    <p class="text-base font-light text-brand-green/70 leading-relaxed">Un extenso predio donde se priorizan los espacios abiertos, el paisajismo autóctono y la respirabilidad del entorno.</p>
+                </div>
+
+                <div class="fade-in delay-200 flex flex-col items-start group">
+                    <div class="w-14 h-14 rounded-full border border-brand-green/20 flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-brand-beige transition-colors duration-500">
+                        <svg class="w-6 h-6 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-green mb-3">411 Lotes</h3>
+                    <p class="text-base font-light text-brand-green/70 leading-relaxed">Con una capacidad estratégicamente distribuida para asegurar privacidad, confort y amplitud entre residencias.</p>
+                </div>
+
+                <div class="fade-in delay-300 flex flex-col items-start group">
+                    <div class="w-14 h-14 rounded-full border border-brand-green/20 flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-brand-beige transition-colors duration-500">
+                        <svg class="w-6 h-6 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-green mb-3">Infraestructura Vial</h3>
+                    <p class="text-base font-light text-brand-green/70 leading-relaxed">Obras de pavimentación y trazado de calles planificadas bajo los más altos estándares para una circulación fluida e inteligente.</p>
+                </div>
+
+                <div class="fade-in delay-400 flex flex-col items-start group">
+                    <div class="w-14 h-14 rounded-full border border-brand-green/20 flex items-center justify-center mb-6 group-hover:bg-brand-green group-hover:text-brand-beige transition-colors duration-500">
+                        <svg class="w-6 h-6 stroke-[1.5]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-serif text-2xl text-brand-green mb-3">Desarrollo Local</h3>
+                    <p class="text-base font-light text-brand-green/70 leading-relaxed">Un proyecto con un fuerte enfoque en la generación de empleo y el impulso a la economía de la comunidad de San Martín.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="masterplan" class="py-32 bg-white border-y border-brand-green/5">
+        <div class="max-w-[90rem] mx-auto px-6 lg:px-12">
+            <div class="text-center fade-in mb-16">
+                <span class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-green/60 mb-3 block">Diseño Urbano</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-green">Masterplan</h2>
+                <div class="w-16 h-[1px] bg-brand-accent mx-auto mt-8"></div>
+                <p class="mt-8 text-brand-green/70 font-light max-w-2xl mx-auto">Observe la cuidadosa disposición de los 411 lotes, pensados para maximizar la privacidad y el acceso a áreas comunes.</p>
+            </div>
+            
+            <div class="fade-in delay-200 relative group max-w-6xl mx-auto">
+                <div class="absolute -inset-2 bg-gradient-to-r from-brand-accent/20 to-brand-green/10 rounded-2xl blur-lg opacity-50 group-hover:opacity-100 transition duration-1000"></div>
+                <img src="imagenes/plano_3D.jfif" alt="Masterplan Barrio Privado Ancellotta" 
+                     class="relative w-full rounded-xl shadow-2xl object-cover border border-white/20">
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="py-32 bg-brand-beige">
+        <div class="max-w-4xl mx-auto px-6 lg:px-12">
+            <div class="text-center fade-in mb-12">
+                <span class="uppercase tracking-[0.2em] text-xs font-semibold text-brand-green/60 mb-3 block">Atención Personalizada</span>
+                <h2 class="font-serif text-4xl md:text-5xl text-brand-green mb-6">Proyecte su Futuro Hoy</h2>
+                <p class="text-brand-green/70 font-light text-lg max-w-xl mx-auto">
+                    Estamos a su disposición para brindarle asesoramiento exclusivo. Contáctenos directamente a través de WhatsApp para recibir información detallada sobre disponibilidad y precios.
+                </p>
+            </div>
+
+            <div class="flex justify-center fade-in delay-200">
+                <!-- WhatsApp CTA Button -->
+                <!-- Replace '1234567890' with the actual phone number -->
+                <a href="https://wa.me/5492613896838?text=Hola,%20quisiera%20más%20información%20sobre%20el%20Barrio%20Privado%20Ancellotta." 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="hover-pulse flex items-center justify-center space-x-4 bg-brand-green text-brand-beige px-10 py-5 rounded-sm shadow-xl hover:bg-brand-lightgreen transition-all duration-300">
+                    
+                    <!-- WhatsApp Icon SVG -->
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    <span class="text-sm tracking-widest uppercase font-medium">Contactar por WhatsApp</span>
+                </a>
+            </div>
+            
+            <p class="text-center text-brand-green/50 text-sm mt-8 fade-in delay-300">
+                Respuesta inmediata por parte de nuestros asesores comerciales.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-brand-green text-brand-beige py-12">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center text-xs font-light tracking-wide opacity-70">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <span class="font-serif text-xl font-medium block md:inline mb-2 md:mb-0 mr-4 opacity-100">Ancellotta</span>
+                Un desarrollo premium en San Martín, Mendoza.
+            </div>
+            <div class="flex space-x-6">
+                <a href="#" class="hover:text-white transition-colors">Políticas de Privacidad</a>
+                <span>&copy; 2026 Todos los derechos reservados.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navbar Scroll Effect Logic
+            const navbar = document.getElementById('navbar');
+            const navBtn = document.getElementById('nav-btn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    // Scrolled state (Light background)
+                    navbar.classList.remove('bg-transparent', 'text-white', 'py-6');
+                    navbar.classList.add('bg-brand-beige', 'text-brand-green', 'shadow-sm', 'py-4', 'border-b', 'border-brand-green/10');
+                    
+                    // Button adjustment for light mode
+                    navBtn.classList.remove('hover:bg-white', 'hover:text-brand-green');
+                    navBtn.classList.add('border-brand-green', 'hover:bg-brand-green', 'hover:text-brand-beige');
+                } else {
+                    // Top state (Transparent/Dark overlay mode)
+                    navbar.classList.add('bg-transparent', 'text-white', 'py-6');
+                    navbar.classList.remove('bg-brand-beige', 'text-brand-green', 'shadow-sm', 'py-4', 'border-b', 'border-brand-green/10');
+                    
+                    // Button adjustment for dark mode
+                    navBtn.classList.add('hover:bg-white', 'hover:text-brand-green');
+                    navBtn.classList.remove('border-brand-green', 'hover:bg-brand-green', 'hover:text-brand-beige');
+                }
+            });
+
+            // Intersection Observer for Elements Fade-in Animations
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Only animate once
+                    }
+                });
+            }, observerOptions);
+
+            // Select all elements with the 'fade-in' class and observe them
+            document.querySelectorAll('.fade-in').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
